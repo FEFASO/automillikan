@@ -1,7 +1,9 @@
-   O programa denominado AutoMillikan tem como objetivo automatizar a análise
-dos vídeos gravados pelos alunos do Instituto de Física da USP (IF-USP) ao
-calcular o valor da carga elementar.
+# Descrição
 
-   A versão atual não é atualizada desde Junho de 2012. Foi esta versão que deu
-resultado ao meu trabalho da disciplina Lab VI. Portanto, eu não sei se o
-programa está funcionando, mas pretendo continuar o desenvolvimento.
+Este programa foi desenvolvido Felipe Viviani Martins (Fefas) para o projeto da
+disciplia *Física Experimental VI* no primeiro semestre de 2012.
+
+O objetivo deste programa é automatizar a tomada de dados a partir de vídeos
+gravados pelos alunos do Instituto de Física da USP (IF-USP) ao refazer a famosa
+experiência de Millikan que foi a primeira forma de se calcula a carga elementar
+do elétron.

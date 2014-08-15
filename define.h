@@ -8,25 +8,32 @@
 #ifndef DEFINE_H_
 #define DEFINE_H_
 
-// BIBLIOTECAS UTILIZADAS NO PROGRAMA INTEIRO
+//
+// Bibliotecas comuns
 #include <iostream>
-#include <sstream>
-#include <math.h>
-#include <time.h>
-#include <SDL/SDL.h>                // Bliblioteca SDL para maniputacao de imagens
-#include <SDL/SDL_image.h>
+//#include <sstream>
+//#include <math.h>
+//#include <time.h>
+//#include <SDL/SDL.h>                // Bliblioteca SDL para maniputacao de imagens
+//#include <SDL/SDL_image.h>
+
+// 
+// Define namespace padrão
 using namespace std;
+
 //
-//
-// DEFINICAO DE CONSTANTES
-//
-// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// CONSTANTES LOGICAS
-// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// ESTRUTURAS, VETORES E LIMITES
+// Definição de constantes
+
+// Constantes lógicas
+
 #define CABECA                -10               // Identifica a cabeca de cabeca de estruturas
 #define N_COR                 256               // Numero de cores de uma imagem em escala cinza
 #define N_CANAL               3                 // Numero de canais levados em consideracao
+
+
+
+
+
 // VETOR > POSICAO E TAMANHO > 'infoProc[]' do VIDEO
 #define ANALISAR              0                 // Se o VIDEO devera' ser analisado
 #define QUEBRADO              1                 // Se o VIDEO ja' foi quebrado em imagens
@@ -70,7 +77,7 @@ using namespace std;
 //
 // REGISTROS
 //
-struct PAR {
+/*struct PAR {
       int x, y; // Par ordenado de plano cartesiano
 };
 struct VALOR {
@@ -88,5 +95,5 @@ short verifica_dir(string dir);
 float distancia(PAR c1, PAR c2);
 // Dados dois pares, devolve true caso eles sejam iguais e false caso contrario
 bool igual(PAR c1, PAR c2);
-
+*/
 #endif /* DEFINE_H_ */

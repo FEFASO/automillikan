@@ -1,32 +1,27 @@
-/*
- * VIDEO.h
- *
- *  Created on: 18/05/2012
- *      Author: F. Viviani Martins
- */
+// -----------------------------------------------------------------------------
+// class/Video.h
+//
+//  Classe para tratamento dos vídeos.
+// -----------------------------------------------------------------------------
 
 #ifndef VIDEO_H_
 #define VIDEO_H_
 
-#include "define.h"
-#include "FRAME.h"
-//
-//
-// CLASSE VIDEO
-//
-class VIDEO
+//#include "define.h"
+//#include "FRAME.h"
+
+class Video
 {
-      // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-      // ATRIBUTOS ESTATICOS
-      // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      // -----------------------------------------------------------------------
+      // Membros Estáticos
    private:
-      static int nVideo;               // Numero de videos carregados
-      // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-      // ATRIBUTOS DO OBJETO
-      // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      static short nVideo;    // Número de videos carregados
+
+      // -----------------------------------------------------------------------
+      // Atributos do objeto
    private:
       // Nome e localizacao do VIDEO no computador
-      string nome;                     // Nome do video sem a extensao
+      /*string nome;                     // Nome do video sem a extensao
       string extensao;                 // Extensao do VIDEO (ex.: '.avi')
       string dir;                      // Diretorio onde o VIDEO se encontra
       // Informacoes dos FRAMEs e IMAGEMs do VIDEO
@@ -47,25 +42,25 @@ class VIDEO
       VALOR densidade_oleo;
       VALOR humidade_relativa;
       VALOR temperatuda;
-      int taxaframes;
-      // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-      // CONSTRUTORES E DESTRUTORES
-      // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-   public:
+      int taxaframes;*/
+      // -----------------------------------------------------------------------
+      // Contrutor e destrutor
+
       // Procura videos dentro do diretorio padrao DIR_VIDEOS.
       //    1) Em caso positivo, carrega os VIDEOs e suas informacoes em uma lista
       //       circular com cabeca e o objeto envolvido apontara' para esta cabeca
       //    2) Em caso negativo, escreve mensagem de erro e finaliza o programa
-      VIDEO();
+   public:
+      Video();
       // Destroi todos os VIDEOs da lista e todos os objetos com dependencia deles
-      virtual ~VIDEO();
+      virtual ~Video();
    private:
       // Dado o diretorio e o nome de um video dentro computador, cria um objeto VIDEO referente
-      VIDEO(string dir, string nome);
+      Video(string dir, string nome);
       // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
       // ESCADA DE PROCESSAMENTO E DADOS ADICIONAIS
       // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-   public:
+   /*public:
       // A partir do arquivo ARQ_INFOPROC, adquiri as informacoes de processamento dos VIDEOs
       void leitura_infoProc();
       // Escreve no arquivo ARQ_INFO as informacoes de processamento de cada VIDEO carregado no programa
@@ -137,7 +132,7 @@ class VIDEO
       // Libera espaco alocado para as imagens
       void libera_memoria();
       // Determina velocidades das gotas
-      void determina_velocidades();
+      void determina_velocidades();*/
 };
 
 #endif /* VIDEO_H_ */

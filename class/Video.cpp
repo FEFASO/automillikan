@@ -1,28 +1,16 @@
-/*
- * VIDEO.cpp
- *
- *  Created on: 18/05/2012
- *      Author: F. Viviani Martins
- */
 
-#include "VIDEO.h"
-#include "PROGRESSO.h"
-//
-//
-// CLASSE VIDEO
-//
-// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// VIDEO :: Variaveis estaticas
-// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-int VIDEO::nVideo = 0;
-// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// VIDEO :: CONSTRUTORES E DESTRUTORES
-// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Procura videos dentro do diretorio padrao DIR_VIDEOS.
-//    1) Em caso positivo, carrega os videos e suas informacoes em uma lista
-//       circular com cabeca e o objeto envolvido apontara' para esta cabeca.
-//    2) Em caso negativo, escreve mensagem de erro e finaliza o programa.
-VIDEO::VIDEO()
+#include "define.h"
+#include "Video.h"
+//#include "PROGRESSO.h"
+
+// -----------------------------------------------------------------------------
+// Inicia membros estáticos
+short Video::nVideo = 0;
+
+// -----------------------------------------------------------------------------
+// Construtor e destrutor
+
+Video::Video()
 {
    char c;              // Caracter para leitura de arquivos
    string str;          // Manipula strings
@@ -30,7 +18,7 @@ VIDEO::VIDEO()
    FILE *arq;           // Aponta para o arquivo que sera' lido
    //
    // Verifica se o diretorio DIR_VIDEOS ja' existe
-   if (verifica_dir(DIR_VIDEOS)) { // Caso DIR_VIDEOS nao tenha sido encontrado: cria DIR_VIDEOS e sai do programa
+/*   if (verifica_dir(DIR_VIDEOS)) { // Caso DIR_VIDEOS nao tenha sido encontrado: cria DIR_VIDEOS e sai do programa
       str = "mkdir ";
       str += DIR_VIDEOS;
       system(str.c_str());
@@ -102,10 +90,10 @@ VIDEO::VIDEO()
    if (this->prx == this) {
       cout << endl << "ERRO_LEITURA <> nao foram encontrados nenhum video em '" << dir << "'" << endl;
       exit(ERRO_LEITURA);
-   }
+   }*/
 }
 
-VIDEO::~VIDEO()
+/*VIDEO::~VIDEO()
 {
    //
    // Armazena as informacoes de escada de processamento de cada VIDEO carregado
@@ -831,9 +819,9 @@ void VIDEO::filtro_menosmedia(float porcao, float distancia)
    this->infoProc[FILTRO_MEDIA] = SIM;
    //
    // Salva imagens final em um diretorio especifico
-   /*ostringstream dir;  // Transforma int em string
+   *ostringstream dir;  // Transforma int em string
    dir << "media_" << porcao << '_' << distancia << '/';
-   this->salva(dir.str());*/
+   this->salva(dir.str());*
 }
 // Sendo o objeto envolvido um video da lista que nao seja a CABECA, esta funcao aplica o filtro limite
 void VIDEO::filtro_limite()
@@ -947,3 +935,4 @@ void VIDEO::determina_velocidades()
 	cout << "Numero de gotas aproveitadas: " << this->nGotas << endl;
 	cout << endl;
 }
+*/

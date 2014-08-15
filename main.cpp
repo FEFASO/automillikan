@@ -4,15 +4,15 @@
 // Copyright   : Your copyright notice
 //============================================================================
 
-#include "define.h"
 #include <time.h>
-#include "VIDEO.h"
+
+#include "class/Video.h"
 
 int main() {
-   //
+
    // Carrega videos dentro do diretorio DIR_VIDEOS
-   VIDEO videos;
-   //
+/*   VIDEO videos;
+
    // Leitura da escada de processamento
    videos.leitura_infoProc();
    //
@@ -46,6 +46,6 @@ int main() {
    if (tempo >= 60.0)
       cout << tempo / 60.0 << " minutos" << endl;
    else
-      cout << tempo << " segundos" << endl;
-	return SUCESSO;
+      cout << tempo << " segundos" << endl;*/
+	return 0;
 }
